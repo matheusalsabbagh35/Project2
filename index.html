@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greenhouse Sensor Logger</title>
+    <!-- Link the CSS file -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!--header-->
+    <header class="portal-header">
+      <div class="header-content">
+        <div class="brand">
+          <h1>Greenhouse Sensor Logger</h1>
+        </div>
+        <div class="header-status">
+          active Logs: <span id="queue-count" class="badge-count">0</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- main section -->
+    <main class="portal-container">
+      <!-- Input form section -->
+      <section id="sensor-entry" class="panel form-panel">
+        <h2 class="panel-title">Record Sensor Reading</h2>
+
+        <!-- Error message for invalid sensor input -->
+        <div
+          id="form-error-banner"
+          class="alert alert-danger hidden"
+          role="alert"
+        ></div>
+
+        <!-- Sensor input form-->
+        <form action="#" id="sensor-form" novalidate></form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+  </body>
+</html>
