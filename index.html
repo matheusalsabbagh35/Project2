@@ -34,10 +34,130 @@
         ></div>
 
         <!-- Sensor input form-->
-        <form action="#" id="sensor-form" novalidate></form>
+        <form action="#" id="sensor-form" novalidate>
+          <div class="form-group">
+            <label for="bay" class="form-label">
+              Greenhouse Bay <span class="required">*</span>
+            </label>
+            <input
+              type="text"
+              id="bay"
+              name="bay"
+              class="form-control"
+              placeholder="e.g. Bay A"
+              required
+            />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="ph" class="form-label">
+                pH Level <span class="required">*</span>
+              </label>
+              <input
+                type="number"
+                name="ph"
+                id="ph"
+                class="form-control"
+                min="0"
+                max="14"
+                step="0.1"
+                placeholder="7.0"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="temp" class="form-label">
+                Temperature (°F) <span class="required">*</span>
+              </label>
+              <input
+                type="number"
+                name="temp"
+                id="temp"
+                class="form-control"
+                min="-459.67"
+                step="0.1"
+                placeholder="75.0"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="ec" class="form-label">
+                Electrical Conductivity (mS/cm) <span class="required">*</span>
+              </label>
+              <input
+                type="number"
+                name="ec"
+                id="ec"
+                class="form-control"
+                min="0"
+                step="0.1"
+                placeholder="1.5"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="humidity" class="form-label">
+                Humidity (%) <span class="required">*</span>
+              </label>
+              <input
+                type="number"
+                name="humidity"
+                id="humidity"
+                class="form-control"
+                min="0"
+                max="100"
+                step="0.1"
+                placeholder="60.0"
+                required
+              />
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            id="btn-submit"
+            class="btn btn-primary btn-block"
+          >
+            Record Reading
+          </button>
+        </form>
+      </section>
+
+      <!-- Sensor log history section -->
+      <section id="sensor-logs" class="panel records-panel">
+        <div class="records-header">
+          <h2 class="panel-title">Sensor Log History</h2>
+          <button
+            id="clear-all"
+            type="button"
+            class="btn btn-outline-danger btn-sm"
+          >
+            Clear All
+          </button>
+        </div>
+
+        <!-- Message when no sensor logs exist -->
+        <div id="empty-state" class="empty-state">
+          <p>No sensor readings logged.</p>
+        </div>
+
+        <!-- Dynamic sensor records -->
+        <ul id="records-list" class="records-grid" aria-live="polite"></ul>
       </section>
     </main>
 
     <!-- Footer -->
+    <footer class="portal-footer">
+      <p>Greenhouse Sensor Logger</p>
+    </footer>
+
+    <!-- Connect JavaScript -->
+    <script src="app.js"></script>
   </body>
 </html>
