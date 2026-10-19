@@ -1,6 +1,6 @@
 :root {
-  --bg-app: #131d35;
-  --bg-panel: #1e293b;
+  --bg-app: #0c122a;
+  --bg-panel: #1e395a;
   --bg-card: #334155;
   --text-main: #f8fafc;
   --text-muted: #909eb0;
@@ -10,7 +10,7 @@
   --primary-hover: #0369a1;
   --danger: #ef1919;
   --warning: #e19209;
-  --success: #0fbb26;
+  --success: #18d531;
 
   --font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;

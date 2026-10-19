@@ -94,7 +94,7 @@ o <section id=”sensor-entry”> [static] (CSS: display: flex; flex-direction: 
 • <input id="ph" type="number" min="0" max="14" step="0.1"
 required> [STATIC] (Event: input)
 • <label for="temp"> Temperature (°F) [STATIC]
-• <input id="temp" type="number" min="-459.67"
+• <input id="temp" type="number" min="-"
 step="0.1" required> [STATIC] (Event: input)
 • <label for="ec"> Electrical Conductivity (mS/cm) [STATIC]
 • <input id="ec" type="number" min="0" step="0.1" required>
